@@ -1,0 +1,35 @@
+#Add-Ingredients{
+    background-color:darkred;
+    color:white;
+    border-radius: 25px;
+}
+#Remove-Ingredients{
+    background-color: deeppink;
+    color:white;
+    border-radius: 25px;
+}
+#Name-Recipe{
+    background-color:palevioletred;
+    color:white;
+    border-radius: 25px;
+    height:5%;
+    width:50%;
+}
+#Submit-Name{
+    background-color:peachpuff;
+    color:maroon;
+}
+#ingredients{
+    background-color: firebrick;
+    color:white;
+    border-radius: 25px;
+}
+h1{
+    background-color: brown;
+    color:white;
+    border-radius: 25px;
+}
+.flex-container div{
+    display:flex;
+    flex:3;
+}

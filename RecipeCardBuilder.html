@@ -1,0 +1,23 @@
+<html>
+    <script src = "cardBuilder.js"defer></script>
+    <link rel="stylesheet"href="style.css">
+    <body>
+        <h1 id = "Recipe">Recipe Card Builder</h1>
+        <div id = "recipeName">
+            <input type = "text" id ="Name-Recipe">
+            <button type = "button" id = "Submit-Name"onclick="addNameRunner()">Submit Name</button>
+        </div>
+        <form id = "ingredientBuilder"action=""method = "post"class = "flex-container">
+            <input type = "text" id = "ingredients">
+            <button type="button" id = "Add-Ingredients" onclick="addIngRunner()">Add</button>
+            <button type = "button" id = "Remove-Ingredients"onclick="delIngRunner()">Remove</button>
+        </form>
+        <!-- <form id = "instructionBuilder" action = "RecipeCardBuilder.html">
+            <input type = "text" id = "instructions">
+            <input type = "submit" id = "Add-Instructions" value = "Add">
+            <input type = "submit" id = "Remove-Instructions" value = "Remove">
+        </form>
+        <input type = "submit" id = "Export-Card" value = "Export">
+        <input type = "submit" id = "Clear" value = "Clear"> -->
+    </body>
+</html>
