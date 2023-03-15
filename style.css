@@ -1,3 +1,15 @@
+#ingredientBuilder{
+    background-color:#08A3C6;
+    border: 3px solid black;
+    padding-bottom:85%;
+    padding-top:10px;
+}
+#instructionBuilder{
+    background-color: #08C6BA;
+    border: 3px solid black;
+    padding-bottom:85%;
+    padding-top:10px;
+}
 #Add-Ingredients{
     background-color:darkred;
     color:white;
@@ -14,6 +26,7 @@
     border-radius: 25px;
     height:5%;
     width:50%;
+    margin-bottom: 25px;
 }
 #Submit-Name{
     background-color:peachpuff;
@@ -24,12 +37,31 @@
     color:white;
     border-radius: 25px;
 }
+#instructions{
+    background-color: hotpink;
+    color:white;
+    border-radius: 25px;
+}
+#Add-Instructions{
+    background-color: darkred;
+    color:white;
+    border-radius:25px;
+}
+#Remove-Instructions{
+    background-color: deeppink;
+    color:white;
+    border-radius: 25px;
+}
 h1{
     background-color: brown;
     color:white;
     border-radius: 25px;
 }
-.flex-container div{
+#recipeOutput{
     display:flex;
-    flex:3;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h2{
+    background-color: FD0572;
 }

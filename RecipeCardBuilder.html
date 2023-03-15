@@ -7,17 +7,21 @@
             <input type = "text" id ="Name-Recipe">
             <button type = "button" id = "Submit-Name"onclick="addNameRunner()">Submit Name</button>
         </div>
-        <form id = "ingredientBuilder"action=""method = "post"class = "flex-container">
-            <input type = "text" id = "ingredients">
-            <button type="button" id = "Add-Ingredients" onclick="addIngRunner()">Add</button>
-            <button type = "button" id = "Remove-Ingredients"onclick="delIngRunner()">Remove</button>
-        </form>
-        <!-- <form id = "instructionBuilder" action = "RecipeCardBuilder.html">
-            <input type = "text" id = "instructions">
-            <input type = "submit" id = "Add-Instructions" value = "Add">
-            <input type = "submit" id = "Remove-Instructions" value = "Remove">
-        </form>
-        <input type = "submit" id = "Export-Card" value = "Export">
-        <input type = "submit" id = "Clear" value = "Clear"> -->
+        <button type = "button" id = "Export-Card"onclick="exportCardRunner()">Export</button>
+        <button type = "button" id = "Clear">Clear</button>
+        <div id ="recipeOutput">
+            <form id = "ingredientBuilder"action=""method = "post"class = "flex-container">
+                <h2>Ingredients</h2>
+                <input type = "text" id = "ingredients">
+                <button type="button" id = "Add-Ingredients" onclick="addIngRunner()">Add</button>
+                <button type = "button" id = "Remove-Ingredients"onclick="delIngRunner()">Remove</button>
+            </form>
+            <form id = "instructionBuilder" action = ""method="post"class = "flex-container">
+                <h2>Instructions</h2>
+                <input type = "text" id = "instructions">
+                <button type = "button" id = "Add-Instructions" onclick="addInsRunner()">Add</button>
+                <button type = "button" id = "Remove-Instructions" onclick="delInsRunner()">Remove</button>
+            </form>
+        </div>
     </body>
 </html>
