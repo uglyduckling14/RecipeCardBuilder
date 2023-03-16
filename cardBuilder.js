@@ -84,34 +84,37 @@ function addNameRunner(){
     nameRecipe.replaceWith(newName);
     console.log(newName);
     newName.style.color="darkbrown";
-    newName.style.backgroundColor="lightsalmon";
+    newName.style.backgroundColor="hotpink";
     newName.style.borderRadius="25px";
     newName.innerHTML=nameRecipe.value;
 }
 function delIngRunner(){
     const removeIng = document.getElementById("ingredients");
+    console.log(removeIng.value);
     del(removeIng,ingredientList);
 }
 function addIngRunner(){
     const addIng =document.getElementById("ingredients");
-    const newDiv=add(document.getElementById("ingredientBuilder"),addIng,ingredientList);
-    newDiv.style.border="3px solid pink ";
+    const newDiv=add(document.getElementById("ingredients"),addIng,ingredientList);
+    newDiv.style.border="3px solid darkred ";
     newDiv.style.width="fit-content";
     newDiv.style.fontSize="20px";
     newDiv.style.display="flex";
     newDiv.style.color="black";
     newDiv.style.flexDirection="column";
+    addIng.value="";
 
 }
 function addInsRunner(){
     const addIns =document.getElementById("instructions");
-    const newDiv=add(document.getElementById("instructionBuilder"),addIns,ingredientList);
-    newDiv.style.border="3px solid #9E0247 ";
+    const newDiv=add(document.getElementById("instructionBuilder"),addIns,instructionList);
+    newDiv.style.border="3px solid rgb(6, 119, 139) ";
     newDiv.style.width="fit-content";
     newDiv.style.fontSize="20px";
-    newDiv.style.color="white";
+    newDiv.style.color="black";
     newDiv.style.display="flex";
     newDiv.style.flexDirection="column";
+    addIns.value="";
 }
 function delInsRunner(){
     const removeIns = document.getElementById("instructions");
@@ -127,13 +130,17 @@ function clearRunner(){
     nameRecipe.value="";
     oldName.replaceWith(nameRecipe);
     const remover = document.getElementsByTagName("p");
-    //console.log(remover);
-    let i =remover.length-1;
+    let i = remover.length;
     while(i!=-1){
       const element = remover[i];
       element.remove();
       i--;
     }
+    // ingredientList.splice(0,ingredientList.length);
+    // instructionList.splice(0,instructionList.length);
+    document.getElementById("Name-Recipe").value="";
+    recipeDict.title="";
+    recipeDict={title:"",ingredients:ingredientList,instructions:instructionList}
 }
 const ingredientList=[];
 const instructionList = [];
@@ -156,7 +163,7 @@ function add(parent1,info,list){
 }
 function del(info,list){
     const ingredient = document.getElementById(info.value+"1");
-    
+    console.log(ingredient);
     const copyList = [];
     for(let i =0; i<list.length;i++){
         if(i!=list.indexOf(info.value)){

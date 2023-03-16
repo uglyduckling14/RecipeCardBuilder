@@ -4,23 +4,23 @@
     <body>
         <h1 id = "Recipe">Recipe Card Builder</h1>
         <div id = "recipeName">
-            <input type = "text" id ="Name-Recipe">
-            <button type = "button" id = "Submit-Name"onclick="addNameRunner()">Submit Name</button>
+            <input type = "text" aria-tag="Recipe Name" id ="Name-Recipe">
+            <button type = "button" aria-tag="Submit Name" id = "Submit-Name"onclick="addNameRunner()">Submit Name</button>
         </div>
-        <button type = "button" id = "Export-Card"onclick="exportCardRunner()">Export</button>
-        <button type = "button" id = "Clear"onclick="clearRunner()">Clear</button>
+        <button type = "button" aria-tag="Export Card" id = "Export-Card"onclick="exportCardRunner()">Export</button>
+        <button type = "button" aria-tag="Clear All Fields" id = "Clear"onclick="clearRunner()">Clear</button>
         <div id ="recipeOutput">
             <form id = "ingredientBuilder"action=""method = "post"class = "flex-container">
                 <h2>Ingredients</h2>
-                <input type = "text" id = "ingredients">
-                <button type="button" id = "Add-Ingredients" onclick="addIngRunner()">Add</button>
-                <button type = "button" id = "Remove-Ingredients"onclick="delIngRunner()">Remove</button>
+                <input type = "text" id = "ingredients"aria-tag="Ingredients Text">
+                <button type="button" id = "Add-Ingredients" onclick="addIngRunner()"aria-tag="Add Ingredients">Add</button>
+                <button type = "button" id = "Remove-Ingredients"onclick="delIngRunner()"aria-tag="Remove Ingredients">Remove</button>
             </form>
             <form id = "instructionBuilder" action = ""method="post"class = "flex-container">
                 <h2>Instructions</h2>
-                <input type = "text" id = "instructions">
-                <button type = "button" id = "Add-Instructions" onclick="addInsRunner()">Add</button>
-                <button type = "button" id = "Remove-Instructions" onclick="delInsRunner()">Remove</button>
+                <input type = "text" id = "instructions"aria-tag="Instructions Text">
+                <button type = "button" id = "Add-Instructions" onclick="addInsRunner()"aria-tag="Add Instructions">Add</button>
+                <button type = "button" id = "Remove-Instructions" onclick="delInsRunner()"aria-tag="Remove Instructions">Remove</button>
             </form>
         </div>
     </body>
