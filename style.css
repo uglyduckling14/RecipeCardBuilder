@@ -29,8 +29,8 @@
     margin-bottom: 25px;
 }
 #Submit-Name{
-    background-color:peachpuff;
-    color:maroon;
+    background-color:rgb(216, 110, 168);
+    color:rgb(248, 243, 243);
 }
 #ingredients{
     background-color: firebrick;
@@ -53,7 +53,7 @@
     border-radius: 25px;
 }
 h1{
-    background-color: brown;
+    background-color: rgb(6, 119, 139);
     color:white;
     border-radius: 25px;
 }
@@ -64,4 +64,12 @@ h1{
 }
 h2{
     background-color: FD0572;
+}
+#Export-Card{
+    background-color: deepskyblue;
+    color:white;
+}
+#Clear{
+    background-color: rgb(228, 4, 4);
+    color:white;
 }

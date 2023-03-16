@@ -73,19 +73,20 @@ function writeRecipeToFile(recipe) {
       </html>
     `;
     download(output, `recipe-card.html`);
-  }
+}
 function addNameRunner(){
     nameRecipe = document.getElementById("Name-Recipe");
-    const newName = document.createElement("h2");
+    newName = document.createElement("h2");
+    newName.setAttribute("id","Recipe-Name");
     newName.value = nameRecipe.value;
     document.getElementById("Submit-Name").style.visibility="hidden";
     recipeDict.title=nameRecipe.value;
     nameRecipe.replaceWith(newName);
+    console.log(newName);
     newName.style.color="darkbrown";
     newName.style.backgroundColor="lightsalmon";
     newName.style.borderRadius="25px";
     newName.innerHTML=nameRecipe.value;
-    console.log(recipeDict.title);
 }
 function delIngRunner(){
     const removeIng = document.getElementById("ingredients");
@@ -98,7 +99,7 @@ function addIngRunner(){
     newDiv.style.width="fit-content";
     newDiv.style.fontSize="20px";
     newDiv.style.display="flex";
-    newDiv.style.color="white";
+    newDiv.style.color="black";
     newDiv.style.flexDirection="column";
 
 }
@@ -119,9 +120,25 @@ function delInsRunner(){
 function exportCardRunner(){
     writeRecipeToFile(recipeDict);
 }
+function clearRunner(){
+    console.log(nameRecipe);
+    document.getElementById("Submit-Name").style.visibility="visible";
+    const oldName = document.getElementById("Recipe-Name");
+    nameRecipe.value="";
+    oldName.replaceWith(nameRecipe);
+    const remover = document.getElementsByTagName("p");
+    //console.log(remover);
+    let i =remover.length-1;
+    while(i!=-1){
+      const element = remover[i];
+      element.remove();
+      i--;
+    }
+}
 const ingredientList=[];
 const instructionList = [];
 let nameRecipe="";
+let newName="";
 const recipeDict={title:nameRecipe,ingredients:ingredientList,instructions:instructionList};
 const nameButton = document.getElementById("Submit-Name").value;
 // const exporting = document.getElementById("Export-Card");
