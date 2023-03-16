@@ -76,3 +76,6 @@ h2{
 html{
     background-color: rgb(151, 255, 245);
 }
+label{
+    font-size:20px;
+}

@@ -90,19 +90,18 @@ function addNameRunner(){
 }
 function delIngRunner(){
     const removeIng = document.getElementById("ingredients");
-    console.log(removeIng.value);
     del(removeIng,ingredientList);
 }
 function addIngRunner(){
     const addIng =document.getElementById("ingredients");
-    const newDiv=add(document.getElementById("ingredients"),addIng,ingredientList);
+    const newDiv=add(document.getElementById("ingredientBuilder"),addIng,ingredientList);
     newDiv.style.border="3px solid darkred ";
     newDiv.style.width="fit-content";
     newDiv.style.fontSize="20px";
     newDiv.style.display="flex";
     newDiv.style.color="black";
     newDiv.style.flexDirection="column";
-    addIng.value="";
+    
 
 }
 function addInsRunner(){
@@ -114,7 +113,7 @@ function addInsRunner(){
     newDiv.style.color="black";
     newDiv.style.display="flex";
     newDiv.style.flexDirection="column";
-    addIns.value="";
+    
 }
 function delInsRunner(){
     const removeIns = document.getElementById("instructions");
@@ -151,6 +150,7 @@ const nameButton = document.getElementById("Submit-Name").value;
 // const exporting = document.getElementById("Export-Card");
 //exporting.addEventListener("click",writeRecipeToFile);
 function add(parent1,info,list){
+  if(recipeDict.title!==""){
     const newDiv = document.createElement("p");
     const newText = document.createTextNode(info.value);
     newDiv.setAttribute("id",info.value+"1");
@@ -158,12 +158,14 @@ function add(parent1,info,list){
     newDiv.appendChild(newText);
     parent1.appendChild(newDiv);
     list.push(info.value);
-    console.log(newDiv.parentElement);
     return newDiv;
+  }else{
+    alert("Enter a name!");
+  }
 }
 function del(info,list){
+  if(recipeDict.title!==""){
     const ingredient = document.getElementById(info.value+"1");
-    console.log(ingredient);
     const copyList = [];
     for(let i =0; i<list.length;i++){
         if(i!=list.indexOf(info.value)){
@@ -172,4 +174,7 @@ function del(info,list){
     }
     ingredient.remove();
     list=copyList;
+  }else{
+  alert("Enter a name!");
+  }
 }
